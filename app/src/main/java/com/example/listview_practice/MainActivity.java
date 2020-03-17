@@ -3,13 +3,16 @@ package com.example.listview_practice;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private ListView listView;
@@ -22,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private String [] names = new String[]{"20161707", "20161713","20171591"," 20171592", "20171616" ,"20171627", "20171641" ,"20171649", "20171650",
             "20171653" ,"20171654", "20171655", "20171656", "20171659", "20171664", "20171666", "20171667", "20171668", "20171669", "20171670", "20171679",
             "20171688", "20171697", "20171705", "20171707" ,"20171714", "20171717", "20171731", "20171742", "20175064", "20175980", "20175990"};
-
+    public static int num = 0;
     @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,144 @@ public class MainActivity extends AppCompatActivity {
         listView=(ListView)findViewById(R.id.listView);
         MyAdapter myAdapter = new MyAdapter();
         listView.setAdapter(myAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(MainActivity.this,ShowInfo.class);
+                switch(position){
+                    case 0:
+                        startActivity(intent);
+                        num=0;
+                        break;
+                    case 1:
+                        startActivity(intent);
+                        num=1;
+                        break;
+                    case 2:
+                        startActivity(intent);
+                        num=2;
+                        break;
+                    case 3:
+                        startActivity(intent);
+                        num=3;
+                        break;
+                    case 4:
+                        startActivity(intent);
+                        num=4;
+                        break;
+                    case 5:
+                        startActivity(intent);
+                        num=5;
+                        break;
+                    case 6:
+                        startActivity(intent);
+                        num=6;
+                        break;
+                    case 7:
+                        startActivity(intent);
+                        num=7;
+                        break;
+                    case 8:
+                        startActivity(intent);
+                        num=8;
+                        break;
+                    case 9:
+                        startActivity(intent);
+                        num=9;
+                        break;
+                    case 10:
+                        startActivity(intent);
+                        num=10;
+                        break;
+                    case 11:
+                        startActivity(intent);
+                        num=11;
+                        break;
+                    case 12:
+                        startActivity(intent);
+                        num=12;
+                        break;
+                    case 13:
+                        startActivity(intent);
+                        num=13;
+                        break;
+                    case 14:
+                        startActivity(intent);
+                        num=14;
+                        break;
+                    case 15:
+                        startActivity(intent);
+                        num=15;
+                        break;
+                    case 16:
+                        startActivity(intent);
+                        num=16;
+                        break;
+                    case 17:
+                        startActivity(intent);
+                        num=17;
+                        break;
+                    case 18:
+                        startActivity(intent);
+                        num=18;
+                        break;
+                    case 19:
+                        startActivity(intent);
+                        num=19;
+                        break;
+                    case 20:
+                        startActivity(intent);
+                        num=20;
+                        break;
+                    case 21:
+                        startActivity(intent);
+                        num=21;
+                        break;
+                    case 22:
+                        startActivity(intent);
+                        num=22;
+                        break;
+                    case 23:
+                        startActivity(intent);
+                        num=23;
+                        break;
+                    case 24:
+                        startActivity(intent);
+                        num=24;
+                        break;
+                    case 25:
+                        startActivity(intent);
+                        num=25;
+                        break;
+                    case 26:
+                        startActivity(intent);
+                        num=26;
+                        break;
+                    case 27:
+                        startActivity(intent);
+                        num=27;
+                        break;
+                    case 28:
+                        startActivity(intent);
+                        num=28;
+                        break;
+                    case 29:
+                        startActivity(intent);
+                        num=29;
+                        break;
+                    case 30:
+                        startActivity(intent);
+                        num=30;
+                        break;
+                    case 31:
+                        startActivity(intent);
+                        num=31;
+                        break;
+
+                }
+            }
+        });
     }
 
 private class MyAdapter extends BaseAdapter{
